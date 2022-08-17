@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>POLL</title>
+    <meta charset="utf-8">
+    <meta name="Googlebot-News" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noimageindex">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="css/slick.css">
+    <link rel="stylesheet" media="all" href="css/slick-theme.css">
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <!-- <link rel="icon" type="image/png" sizes="28x28" href="img/favi.png"> -->
+    <link rel="stylesheet" href="css/loading.css">
+    <meta name="theme-color" content="#sdfsf">
+</head>
+
+<body class="themebgcolor">
+    <br><br><br>
+    <div class="col-lg-4">
+        <br>
+        <form onSubmit="return false;">
+            <div class="form-group">
+                <input type="text" class="form-control" id="description" placeholder="Description">
+            </div>
+            <button id="startPoll" type="submit" class="btn btn-outline-primary">Create Poll</button>
+            <br><br>
+            <p id="descrip"></p>
+        </form>
+    </div>
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://github.com/MatinJiridity">Decentralized Poll</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <small><a class="nav-link" href="https://github.com/MatinJiridity">Your Account: <span
+                            id="account"></span></a></small>
+            </li>
+        </ul>
+    </nav>
+    <br><br>
+    <div class="btn-group-ml btnmargin" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" class="btn-check" onclick="activePoll()" id="btncheck2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck2">Poll Active</label>
+
+        <input type="checkbox" class="btn-check" onclick="closePoll()" id="btncheck3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck3">Poll Ended</label>
+
+        <input type="checkbox" class="btn-check" onclick="anuonceResult()" id="btncheck4" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck4">Result Realise</label>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="alert alert-warning Addmargin" role="alert">
+            Status :<span id="statusFill"></span>
+        </div>
+        <div class="alert alert-info Addmargin" id="result" role="alert">
+            Poll Result : <span id="resultFill"></span>
+        </div>
+    </div>
+    <br><br>
+
+
+    <div class="col-lg-3">
+        <input type="text" class="form-control" id="hashfillforpolling" placeholder="PollHash ">
+        <div class="input-group-prepend">
+            <button id="submitVote" class="btn  btn-outline-success" type="button">Poll</button>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="col-lg-4">
+        <br>
+        <form onSubmit="return false;">
+            <div class="form-group">
+                <input type="text" class="form-control" id="saltFill" placeholder="Salt">
+            </div>
+            <button id="revealPoll" type="submit" class="btn btn-outline-success">Reveal Poll</button>
+        </form>
+    </div>
+
+
+    <br><br>
+    <div class="col-lg-4">
+        <br>
+        <form onSubmit="return false;">
+            <div class="form-group">
+                <input type="text" class="form-control" id="RandomNumber" placeholder="RandomNumber">
+            </div>
+            <button onclick="getHashKeccak256ByWeb3()" type="submit" class="btn btn-outline-primary">Get Hash</button>
+            <br><br>
+            <p id="hash"></p>
+        </form>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- <script src="js/jquery-2.0.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/slick.js"></script>
+    <script src="js/comman.js"></script>
+    <script src="js/ipfs-mini.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3new.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+    <script src="js/jquery.msgBox.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
